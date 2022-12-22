@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "295173101516",
+    "project_id": "sprinttresv2",
+    "storage_bucket": "sprinttresv2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295173101516:android:ed670754c0bc5ead8bef69",
+        "android_client_info": {
+          "package_name": "com.ricardo_rivera_beltran.sprinttresv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "295173101516-i150b659p1oelfq0q90m6o4loki54lem.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGvtfRuJ0vKNRSn0Jjm3-PunN6N5jjkZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "295173101516-i150b659p1oelfq0q90m6o4loki54lem.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
