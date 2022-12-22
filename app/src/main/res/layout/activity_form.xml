@@ -36,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:text="Producto" />
 
             <EditText
                 android:id="@+id/editNameForm"
@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:text="Descripción" />
 
             <EditText
                 android:id="@+id/editDescriptionForm"
@@ -74,7 +74,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textNameForm"
+                android:id="@+id/textPriceForm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -94,6 +94,6 @@
             android:id="@+id/btnForm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Guardar" />
     </LinearLayout>
 </LinearLayout>

@@ -10,7 +10,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ricardo_rivera_beltran.sprinttresv2.Catalogo;
+import com.ricardo_rivera_beltran.sprinttresv2.DB.DBFirebase;
 import com.ricardo_rivera_beltran.sprinttresv2.Entidades.Producto;
+import com.ricardo_rivera_beltran.sprinttresv2.Form;
 import com.ricardo_rivera_beltran.sprinttresv2.Info;
 import com.ricardo_rivera_beltran.sprinttresv2.R;
 
@@ -78,18 +81,40 @@ public class ProductoAdapter extends BaseAdapter{
         btnDeleteProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent adelante = new Intent(context, Info.class);
-                adelante.putExtra("name", producto.getName());
-                adelante.putExtra("description", producto.getDescription());
-                adelante.putExtra("price", String.valueOf(producto.getPrice()));
-                context.startActivity(adelante);
+                Intent intent = new Intent(context, Info.class);
+                intent.putExtra("name", producto.getName());
+                intent.putExtra("description", producto.getDescription());
+                intent.putExtra("price", String.valueOf(producto.getPrice()));
+                context.startActivity(intent);
 
             }
         });
 
+        btnDeleteProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DBFirebase dbFirebase = new DBFirebase();
+                dbFirebase.deleteData(producto.getId());
+                Intent intent = new Intent(context, Catalogo.class);
+                context.startActivity(intent);
+
+            }
+        });
+
+
         btnEditProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(context, Form.class);
+                intent.putExtra("edit", true);
+                intent.putExtra("id", producto.getId());
+                intent.putExtra("name", producto.getName());
+                intent.putExtra("description", producto.getDescription());
+                intent.putExtra("price", String.valueOf(producto.getPrice()));
+                intent.putExtra("image", producto.getImage());
+                intent.putExtra("latitud", producto.getLatitud());
+                intent.putExtra("longitud", producto.getLongitud());
+                context.startActivity(intent);
 
             }
         });
